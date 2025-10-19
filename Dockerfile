@@ -12,6 +12,5 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Puerto expuesto (el mismo que usa tu Spring Boot)
 EXPOSE 8080
-
 # Comando para ejecutar la app
 ENTRYPOINT ["java", "-jar", "app.jar"]
