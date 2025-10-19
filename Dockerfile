@@ -14,4 +14,4 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 # Comando para ejecutar la app
 # Render asigna el puerto a la variable de entorno $PORT
-ENTRYPOINT ["sh", "-c", "java -jar app.jar --server.port=${PORT:-8080}"]
+ENTRYPOINT ["sh", "-c", "java -jar app.jar --server.port=${PORT:-8080} --server.address=0.0.0.0"]
